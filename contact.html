@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact form for eamil using</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="contact.js">
+</head>
+<body>
+    <div class="container">
+        <form action="" id="contact" class="contactForm" onsubmit="sendEmail(); reset(); return false;">
+            <h3>GET IN TOUCH</h3>
+            <input type="text" id="name" placeholder="Your Name" >
+            <p id="nameError" class="error"></p>
+            <input type="email" id="email" placeholder="Email id" >
+            <p id="emailError" class="error"></p>
+            <input type="text" id="phone" placeholder="Phone no." >
+            <p id="phoneError" class="error"></p>
+            <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <!-- <script src="contact.js"></script>
+    <script src=" https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script>
+        function sendEmail(){
+            console.log("form received")
+           if(validateForm())
+           {
+            Email.send({
+                Host : "smtp.elasticemail.com",  
+                From :  "anibakaleem@gmail.com",
+                Username : "anibakaleem@gmail.com",
+                Password : "D934182424BEF26707676CFC7DD6FB8B6218",
+                To : "anibakaleem@gmail.com",
+                // To : document.getElementById("email").value,
+                Subject : "New Contact Form Enquiry",
+                Body : "Name:" + document.getElementById("name").value
+                  + "<br>  Email:" +  document.getElementById("email").value
+                  + "<br> Phone:" +  document.getElementById("phone").value
+                  + "<br>  Message:" +  document.getElementById("message").value
+                }
+                ).then(
+                message => {
+                    alert("message sent sucessfully");
+                    console.log(message);
+                }
+                ).catch(err=> {
+                    console.log("error while sending data to form", err)
+                });
+            }
+        }
+        
+        let name = document.getElementById("name");
+        let email = document.getElementById("email");
+        let phone = document.getElementById("phone");
+        let done = 1;
+
+        function validateForm(){
+            if(name.value == ""){
+                document.getElementById("nameError").innerHTML = "User Name is Empty!";
+                done = 0;
+            }else{
+                document.getElementById("nameError").innerHTML = "";
+                done = 1;
+            }
+            if (email.value == ""){
+                document.getElementById("emailError").innerHTML = "Email is Empty!";
+                done = 0;
+            }else{
+                document.getElementById("emailError").innerHTML = "";
+                done = 1;
+            }
+            if (phone.value == ""){
+                document.getElementById("phoneError").innerHTML = "Phone no. is Empty!";
+                done = 0;
+            }else{
+                document.getElementById("phoneError").innerHTML = "";
+                done = 1;
+            }
+            
+            if(done){
+                
+                return true;
+
+            }else{
+                return false;
+            }
+        }
+    </script> -->
+   
+</body>
